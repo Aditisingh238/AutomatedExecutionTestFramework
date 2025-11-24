@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PersistenceUnitSettings">
+    <persistence-units>
+      <persistence-unit moduleName="automated-regression-framework" name="automated-regression-framework" framework="JPA" ormUnit="automated-regression-framework:automated-regression-framework" defaultDataSourceId="98c09d05-b308-4933-8714-96b02bd50989" />
+    </persistence-units>
+  </component>
+</project>

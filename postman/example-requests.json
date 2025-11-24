@@ -1,0 +1,59 @@
+{
+  "requests": [
+    {
+      "name": "Integrate Test",
+      "method": "POST",
+      "url": "http://localhost:8080/tests/integrate",
+      "body": {
+        "testName": "LoginAPITest",
+        "testType": "API",
+        "framework": "REST-Assured",
+        "endpoint": "POST https://api.demoapp.com/login",
+        "method": "POST",
+        "description": "Verify login API returns 200 OK for valid credentials"
+      }
+    },
+    {
+      "name": "Schedule Run",
+      "method": "POST",
+      "url": "http://localhost:8080/schedule/run",
+      "body": {
+        "suiteName": "RegressionSuiteV1",
+        "triggeredBy": "QA_Madhuri",
+        "executionMode": "PARALLEL",
+        "tests": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "Generate Report",
+      "method": "POST",
+      "url": "http://localhost:8080/reports/generate",
+      "body": [
+        1
+      ]
+    },
+    {
+      "name": "Collect Logs",
+      "method": "POST",
+      "url": "http://localhost:8080/logs/collect",
+      "body": {
+        "executionId": 1,
+        "testId": 1,
+        "errorLog": "Sample error",
+        "screenshotPath": "screenshots/1.png"
+      }
+    },
+    {
+      "name": "Send Notification",
+      "method": "POST",
+      "url": "http://localhost:8080/notifications/send",
+      "body": {
+        "to": "team@company.com",
+        "subject": "Suite Completed",
+        "message": "RegressionSuite finished"
+      }
+    }
+  ]
+}
