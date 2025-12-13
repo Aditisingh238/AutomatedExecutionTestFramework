@@ -14,6 +14,8 @@ public class NotificationController {
     @Autowired
     private EmailService emailService;
 
+    ///emailService****************
+
     @PostMapping("/send")
     public ResponseEntity<?> send(@RequestBody Map<String, String> body) {
         String to = body.getOrDefault("to", null);

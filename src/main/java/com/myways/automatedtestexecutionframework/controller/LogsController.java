@@ -13,7 +13,7 @@ public class LogsController {
 
     @Autowired
     private TestLogRepository logRepository;
-
+//****************logRepository
     @PostMapping("/collect")
     public ResponseEntity<?> collect(@RequestBody TestLog log) {
         TestLog saved = logRepository.save(log);

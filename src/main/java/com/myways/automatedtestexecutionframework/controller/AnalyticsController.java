@@ -12,9 +12,9 @@ public class AnalyticsController {
 
     @Autowired
     private AnalyticsService analyticsService;
-
+//analyticsService
     @GetMapping("/trends/{suiteId}")
-    public ResponseEntity<?> trends(@PathVariable Long suiteId) {
+    public ResponseEntity<?> trends(@PathVariable("suiteId") Long suiteId) {
         Map<String, Long> map = analyticsService.getStatusCounts(suiteId);
         return ResponseEntity.ok(map);
     }

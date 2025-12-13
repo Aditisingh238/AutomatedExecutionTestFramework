@@ -24,6 +24,8 @@ public class TestController {
     @Autowired
     private TestExecutionRepository executionRepository;
 
+
+/// service*********************************
     @PostMapping("/integrate")
     public ResponseEntity<TestCase> integrate(@RequestBody TestCaseDto dto) {
         TestCase tc = new TestCase();
@@ -43,6 +45,16 @@ public class TestController {
         return tc.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+
+
+
+
+
+
+
+
+    ////testCaseRepository*******************************************************************
+
     @GetMapping
     public List<TestCase> getAll() {
         return testCaseRepository.findAll();
@@ -54,8 +66,11 @@ public class TestController {
         return ResponseEntity.ok(exec);
     }
 
+
+
+    /// executionRepository****************************************************************
     @GetMapping("/executions/{id}")
-    public ResponseEntity<?> getExecution(@PathVariable Long id) {
+    public ResponseEntity<TestExecution> getExecution(@PathVariable("id") Long id) {
         return executionRepository.findById(id).map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 }
