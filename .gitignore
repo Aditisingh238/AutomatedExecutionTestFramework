@@ -1,0 +1,11 @@
+# Backend
+backend/target/
+*.log
+
+# IDE
+.idea/
+*.iml
+
+# OS
+Thumbs.db
+.DS_Store
